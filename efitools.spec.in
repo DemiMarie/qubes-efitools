@@ -1,6 +1,6 @@
 Name:           efitools
-Version:        1.9.2
-Release:        5%{?dist}
+Version:        @VERSION@
+Release:        @REL@%{?dist}
 Summary:        Tools to manipulate EFI secure boot keys and signatures
 License:        GPLv2 and LGPLv2 and BSD
 
@@ -63,20 +63,4 @@ rm -v %{buildroot}%{_docdir}/%{name}/COPYING
 %{_bindir}/sign-efi-sig-list
 
 %changelog
-* Wed Jul 21 2021 Fedora Release Engineering <releng@fedoraproject.org> - 1.9.2-5
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
-
-* Sun Mar 07 2021 Vladislav Kazakov <vpackager@gmail.com> - 1.9.2-4 
-- Fix incorrect build.
-
-* Sat Feb 06 2021 Vladislav Kazakov <vpackager@gmail.com> - 1.9.2-3
-- Add system flags to CFLAGS.
-- Remove i686 support.
-
-* Sun Jan 31 2021 Vladislav Kazakov <vpackager@gmail.com> - 1.9.2-2
-- Add BSD license.
-- Rename LGPLv2.1 to LGPLv2. 
-- Add reference to issue about mktemp usage.
-
-* Sun Jan 17 2021 Vladislav Kazakov <vpackager@gmail.com> - 1.9.2-1
-- Initial SPEC release.
+@CHANGELOG@
